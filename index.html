@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ねこパンチ・モール</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="hud">
+  <div id="status">
+    <div id="lv">Lv.1</div>
+    <div id="xp"><div id="xp-fill"></div></div>
+    <div id="next"></div>
+  </div>
+  <div id="stats">
+    <div class="row"><span>被害総額</span><b id="yen">¥0</b></div>
+    <div class="row small"><span>破壊率</span><b id="rate">0%</b><span>タイム</span><b id="time">0:00</b></div>
+  </div>
+  <div id="help">WASD 移動　Shift 走る　Space ジャンプ　J / F ねこパンチ　ドラッグ カメラ　ホイール ズーム　M 音　G 図鑑　P 画質</div>
+</div>
+<div id="toast"></div>
+<div id="combo"></div>
+<div id="pops"></div>
+<div id="ticker"></div>
+<div id="flash"></div>
+<div id="zukan">
+  <div class="panel">
+    <div class="head"><div class="ttl">ねこパンチ図鑑</div><div class="count"></div><div class="hint">壊した物を選ぶと くわしく見られる　G / Esc で閉じる</div><button class="close">✕</button></div>
+    <div class="grid"></div>
+    <div class="detail">
+      <div class="dbox"><button class="back">← もどる</button><div class="title"></div><div class="view"></div><div class="meta"></div><div class="dhint">ドラッグで回す・ホイールで寄る</div></div>
+    </div>
+  </div>
+</div>
+<div id="title">
+  <div class="box">
+    <div class="logo">ねこパンチ・モール</div>
+    <div class="lead">はじまりは ペットショップの小さな ねこ部屋。<br>壊すほど ねこは どんどん大きくなる。<br>部屋 → モール → 街 → 山と海 → そして宇宙へ…<br>さいごは 太陽まで壊して、太陽系ごと崩せ！</div>
+    <div class="keys">WASD / 矢印 移動　Shift 走る　Space ジャンプ<br>J / F ねこパンチ　ドラッグ カメラ回転　ホイール ズーム　M 音 ON/OFF</div>
+    <div class="start">Enter / J でスタート</div>
+    <div class="keys" style="margin-top:10px">G で ねこパンチ図鑑　P で 画質（重い・熱い時は「低」に）</div>
+  </div>
+</div>
+<div id="result">
+  <div class="box">
+    <div class="logo">街 完全崩壊！</div>
+    <div class="stats"></div>
+    <div class="start">R でもう一度</div>
+  </div>
+</div>
+<div id="loading">よみこみ中…</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
